@@ -1,0 +1,19 @@
+{
+    "name": "Twitter Logo Setter.",
+    "version": "1.0",
+    "description": "Twitter Logo Setter.",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "matches": ["https://*.twitter.com/*"],
+        "js": ["contentScript.js"]
+    }],
+    "action": {
+        "default_icon": "icon.png",
+        "default_title": "Twitter Logo Setter",
+        "default_popup": "popup.html"
+    },
+    "permissions": ["tabs"]
+}
